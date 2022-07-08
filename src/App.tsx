@@ -1,10 +1,22 @@
-import Button from "@mui/material/Button";
+import { useState } from "react";
+import { Table } from "./views/Table/Table";
+import { useRickAndMorty } from "./hooks/useRickAndMorty";
 
 export const App = () => {
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const { isLoading, data, isError } = useRickAndMorty(pageNumber);
+
+  if (isError) return <h1>Error...</h1>;
+  if (isLoading) return <h1>Loading...</h1>;
+
   return (
-    <div className="App">
-      <h1>App</h1>
-      <Button variant="contained">Hello World</Button>
-    </div>
+    <Table
+      data={data.results}
+      rowCount={data.info.count}
+      isLoading={isLoading}
+      pageNumber={pageNumber}
+      setPageNumber={setPageNumber}
+    />
   );
 };

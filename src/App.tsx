@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Table } from "./views/Table/Table";
 import { useRickAndMorty } from "./hooks/useRickAndMorty";
+import Layout from "./components/Layout";
 
 export const App = () => {
   const [pageNumber, setPageNumber] = useState(0);
@@ -11,12 +12,15 @@ export const App = () => {
   if (isLoading) return <h1>Loading...</h1>;
 
   return (
-    <Table
-      data={data.results}
-      rowCount={data.info.count}
-      isLoading={isLoading}
-      pageNumber={pageNumber}
-      setPageNumber={setPageNumber}
-    />
+    <Layout>
+      <Table
+        data={data.results}
+        rowCount={data.info.count}
+        pageCount={data.info.pages}
+        isLoading={isLoading}
+        pageNumber={pageNumber}
+        setPageNumber={setPageNumber}
+      />
+    </Layout>
   );
 };

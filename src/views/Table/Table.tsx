@@ -1,38 +1,31 @@
-import { TableProps } from "./types";
+import { Data } from "../../types/data.types";
 import { columns } from "./columns";
 import { DataGrid } from "@mui/x-data-grid";
-import { useWindowSize } from "../../hooks/useWindowSize";
-import { SearchBar } from "../../components/SearchBar";
-import { FilterSelect } from "../../components/FilterSelect";
+import { NotFound } from "../../components/common/NotFound";
 
-const responsiveStyle = { height: "calc(100vh - 120px)", width: "100%", marginTop: 64 };
-const normalStyle = { height: "calc(100vh - 112px)", width: "100%", marginTop: 56 };
+interface TableProps {
+  isLoading: boolean;
+  data: Data;
+  setPageNumber: (pageNumber: number) => void;
+}
 
-export const Table = ({ isLoading, data, rowCount, pageNumber, setPageNumber }: TableProps) => {
-  const { width } = useWindowSize();
+export const Table = ({ isLoading, data, setPageNumber }: TableProps) => {
+  if (data.error === "There is nothing here") return <NotFound />;
 
   return (
-    <div style={width < 600 ? normalStyle : responsiveStyle}>
-      <div style={{ display: "flex", width: "100%" }}>
-        <SearchBar />
-        <FilterSelect />
-      </div>
-
-      <DataGrid
-        columns={columns}
-        rows={data}
-        rowCount={rowCount}
-        loading={isLoading}
-        pagination
-        rowsPerPageOptions={[20]}
-        page={pageNumber}
-        pageSize={20}
-        paginationMode="server"
-        onPageChange={(newPage) => setPageNumber(newPage)}
-        density="comfortable"
-        disableColumnMenu={true}
-        // onSelectionModelChange={(params) => console.log(params)}
-      />
-    </div>
+    <DataGrid
+      columns={columns}
+      rows={data.results}
+      rowCount={data.info.count}
+      loading={isLoading}
+      pagination
+      rowsPerPageOptions={[20]}
+      pageSize={20}
+      paginationMode="server"
+      onPageChange={(newPage) => setPageNumber(newPage)}
+      density="comfortable"
+      disableColumnMenu={true}
+      // onSelectionModelChange={(params) => ""}
+    />
   );
 };

@@ -21,7 +21,7 @@ interface Props {
 const drawerWidth = 240;
 const navItems = ["Table", "Cards", "Chart"];
 
-export default function DrawerAppBar(props: Props) {
+export const Layout = (props: Props) => {
   const { window, children } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -98,4 +98,4 @@ export default function DrawerAppBar(props: Props) {
       {children}
     </Box>
   );
-}
+};

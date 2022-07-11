@@ -1,6 +1,5 @@
 import { GridColDef } from "@mui/x-data-grid";
-import Avatar from "@mui/material/Avatar";
-import Chip from "@mui/material/Chip";
+import { Avatar, Chip } from "@mui/material";
 
 export const columns: GridColDef[] = [
   {

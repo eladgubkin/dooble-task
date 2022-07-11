@@ -1,6 +1,6 @@
 export interface Data {
   info: Info;
-  results: Result[];
+  results: Character[];
   error: string;
 }
 
@@ -11,7 +11,7 @@ export interface Info {
   prev: null;
 }
 
-export interface Result {
+export interface Character {
   id: number;
   name: string;
   status: Status;

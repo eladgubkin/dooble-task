@@ -1,16 +1,7 @@
+import { SelectFiltersProps } from "../types/props.types";
 import { Selector } from "./Selector";
 
-export const Filters = ({
-  setStatus,
-  setGender,
-  status,
-  gender,
-}: {
-  setStatus: React.Dispatch<React.SetStateAction<string>>;
-  setGender: React.Dispatch<React.SetStateAction<string>>;
-  status: string;
-  gender: string;
-}) => {
+export const SelectFilters = ({ setStatus, setGender, status, gender }: SelectFiltersProps) => {
   return (
     <>
       <Selector

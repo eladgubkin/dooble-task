@@ -3,7 +3,7 @@ import { useRickAndMorty } from "./hooks/useRickAndMorty";
 
 // Components
 import { Table } from "./components/Table";
-import { Controls } from "./components/Controls";
+import { FiltersArea } from "./components/FiltersArea";
 import { Dialog } from "./components/Dialog";
 import { Loading } from "./components/Loading";
 
@@ -22,13 +22,14 @@ export const App = () => {
   return (
     <div style={{ height: "calc(100vh - 144px)" }}>
       {/* ------- Filters Area ------- */}
-      <Controls
+      <FiltersArea
         search={search}
         setSearch={setSearch}
         status={status}
         setStatus={setStatus}
         gender={gender}
         setGender={setGender}
+        setPageNumber={setPageNumber}
       />
 
       {/* ------- Table ------- */}

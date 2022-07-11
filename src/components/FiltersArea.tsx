@@ -1,14 +1,29 @@
+import { FiltersAreaProps } from "../types/props.types";
 import { useContext } from "react";
+
+// Components
 import { SearchBar } from "./SearchBar";
-import { Filters } from "./Filters";
-import Button from "@mui/material/Button";
+import { SelectFilters } from "./SelectFilters";
+import { Button } from "@mui/material";
+import { IconButton } from "@mui/material";
+
+// Theme
 import { useTheme } from "@mui/material/styles";
 import { ColorModeContext } from "../main";
-import IconButton from "@mui/material/IconButton";
+
+// Icons
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 
-export const Controls = ({ search, setSearch, status, setStatus, gender, setGender }) => {
+export const FiltersArea = ({
+  search,
+  setSearch,
+  status,
+  setStatus,
+  gender,
+  setGender,
+  setPageNumber,
+}: FiltersAreaProps) => {
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
 
@@ -24,7 +39,12 @@ export const Controls = ({ search, setSearch, status, setStatus, gender, setGend
         </IconButton>
       </div>
       <div style={{ display: "flex" }}>
-        <Filters setStatus={setStatus} setGender={setGender} status={status} gender={gender} />
+        <SelectFilters
+          setStatus={setStatus}
+          setGender={setGender}
+          status={status}
+          gender={gender}
+        />
         <Button
           style={{ minWidth: 115, margin: "10px 0 10px 0" }}
           variant="contained"
@@ -32,6 +52,7 @@ export const Controls = ({ search, setSearch, status, setStatus, gender, setGend
             setSearch("");
             setStatus("");
             setGender("");
+            setPageNumber(0);
           }}
         >
           CLEAR ALL

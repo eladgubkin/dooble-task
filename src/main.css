@@ -10,3 +10,15 @@ body {
   display: flex !important;
   justify-content: center !important;
 }
+
+.MuiDataGrid-root .MuiDataGrid-cell:focus {
+  outline: none !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-cell {
+  cursor: pointer !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-row:hover {
+  background-color: lightsteelblue !important;
+}

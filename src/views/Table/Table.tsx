@@ -7,9 +7,11 @@ interface TableProps {
   isLoading: boolean;
   data: Data;
   setPageNumber: (pageNumber: number) => void;
+  setCharacter: (bool: any) => void;
+  handleOpen: () => void;
 }
 
-export const Table = ({ isLoading, data, setPageNumber }: TableProps) => {
+export const Table = ({ isLoading, data, setPageNumber, setCharacter, handleOpen }: TableProps) => {
   if (data.error === "There is nothing here") return <NotFound />;
 
   return (
@@ -23,9 +25,13 @@ export const Table = ({ isLoading, data, setPageNumber }: TableProps) => {
       pageSize={20}
       paginationMode="server"
       onPageChange={(newPage) => setPageNumber(newPage)}
-      density="comfortable"
+      density="standard"
       disableColumnMenu={true}
-      // onSelectionModelChange={(params) => ""}
+      keepNonExistentRowsSelected
+      onSelectionModelChange={(id) => {
+        setCharacter(data.results.filter((row) => row.id === id[0])[0]);
+        handleOpen();
+      }}
     />
   );
 };

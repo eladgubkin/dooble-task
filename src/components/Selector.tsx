@@ -1,9 +1,7 @@
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import InputLabel from "@mui/material/InputLabel";
-import FormControl from "@mui/material/FormControl";
+import { SelectorProps } from "../types/props.types";
+import { Select, MenuItem, InputLabel, FormControl } from "@mui/material";
 
-export const Selector = ({ label, menuItems, setSelectValue, selectValue }) => {
+export const Selector = ({ label, menuItems, setSelectValue, selectValue }: SelectorProps) => {
   return (
     <FormControl fullWidth variant="standard" style={{ margin: 10 }}>
       <InputLabel>{label}</InputLabel>

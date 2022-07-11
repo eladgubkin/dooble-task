@@ -1,8 +1,9 @@
+import { SearchBarProps } from "../types/props.types";
 import { useEffect, useState } from "react";
 import { TextField } from "@mui/material";
 import { useDebounce } from "../hooks/useDebounce";
 
-export const SearchBar = ({ search, setSearch }) => {
+export const SearchBar = ({ search, setSearch }: SearchBarProps) => {
   const [value, setValue] = useState("");
   const debouncedSearch = useDebounce(value, 500);
 

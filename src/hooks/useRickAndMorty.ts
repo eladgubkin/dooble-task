@@ -2,13 +2,12 @@ import { useEffect } from "react";
 import { useQuery } from "react-query";
 import { queryClient } from "../main";
 
-const fetchCharacters = (pageNumber: number, search: string, status: string, gender: string) => {
-  return fetch(
+const fetchCharacters = (pageNumber: number, search: string, status: string, gender: string) =>
+  fetch(
     `https://rickandmortyapi.com/api/character?page=${pageNumber + 1}${
       search ? `&name=${search}` : ""
     }${status ? `&status=${status}` : ""}${gender ? `&gender=${gender}` : ""}`
   ).then((res) => res.json());
-};
 
 export const useRickAndMorty = (
   pageNumber: number,

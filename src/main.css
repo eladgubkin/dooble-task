@@ -18,7 +18,3 @@ body {
 .MuiDataGrid-root .MuiDataGrid-cell {
   cursor: pointer !important;
 }
-
-.MuiDataGrid-root .MuiDataGrid-row:hover {
-  background-color: lightsteelblue !important;
-}

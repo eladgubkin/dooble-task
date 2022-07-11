@@ -1,15 +1,7 @@
-import { Data } from "../types/data.types";
+import { TableProps } from "../types/props.types";
 import { columns } from "./columns";
 import { DataGrid } from "@mui/x-data-grid";
 import { NotFound } from "./NotFound";
-
-interface TableProps {
-  isLoading: boolean;
-  data: Data;
-  setPageNumber: (pageNumber: number) => void;
-  setCharacter: (bool: any) => void;
-  handleOpen: () => void;
-}
 
 export const Table = ({ isLoading, data, setPageNumber, setCharacter, handleOpen }: TableProps) => {
   if (data.error === "There is nothing here") return <NotFound />;

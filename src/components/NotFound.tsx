@@ -1,4 +1,4 @@
-import GIF from "../../assets/VEW6.gif";
+import GIF from "../assets/NotFound.gif";
 
 export const NotFound = () => {
   return (

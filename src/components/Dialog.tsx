@@ -56,7 +56,7 @@ export const Dialog = ({ open, handleClose, character }: DialogProps) => {
             boxShadow: 24,
           }}
         >
-          <img src={character.image} alt={character.image} />
+          <img src={character.image} alt={character.image} width="100%" />
           <Typography variant="h6" style={{ textAlign: "center" }}>
             {character.name}
           </Typography>

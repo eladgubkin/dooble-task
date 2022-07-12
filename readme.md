@@ -9,11 +9,21 @@
 - [Rick & Morty API](https://rickandmortyapi.com/)
 - [React Query](https://react-query-v2.tanstack.com/)
 
+## Features
+
+- Pagination using react-query
+- Search mechanism (with debounce)
+- Filter mechanism (hard coded options)
+- Dialog modal (more details on the character)
+- Not found message - 404
+- Dark mode
+- Mobile friendly
+
 ## Demo:
 
 ### Pagination
 
-![Alt Text](./src//assets//pagination.gif) s
+![Alt Text](./src//assets//pagination.gif)
 
 ### Search and Filter
 
@@ -22,6 +32,10 @@
 ### Dialog
 
 ![Alt Text](./src//assets//dialog.gif)
+
+### 404 - Not Found
+
+![Alt Text](./src//assets//not-found.gif)
 
 ### Dark Mode
 

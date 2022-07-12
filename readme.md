@@ -1,8 +1,14 @@
 # Rick & Morty Characters App
 
-[Task instructions](https://gist.github.com/jacobra19/180a0d4b623fbc7c80a2209e89295ed3)
+[Task Instructions](https://gist.github.com/jacobra19/180a0d4b623fbc7c80a2209e89295ed3)
 
-## Libraries used in this project:
+## Table of Contents
+
+- [Libraries used in this project](#libraries-used-in-this-project)
+- [Features](#features)
+- [Demo](#demo)
+
+## Libraries used in this project
 
 - [React](https://reactjs.org/)
 - [Material-UI](https://mui.com/)
@@ -11,13 +17,13 @@
 
 ## Features
 
-- Pagination using react-query
-- Search mechanism (with debounce)
-- Filter mechanism (hard coded options)
-- Dialog modal (more details on the character)
-- Not found message - 404
-- Dark mode
-- Mobile friendly
+- [Pagination using react-query](#pagination)
+- [Search mechanism (with debounce)](#search-and-filter)
+- [Filter mechanism (hard coded options)](#search-and-filter)
+- [Dialog modal (more details on the character)](#dialog)
+- [Not found message - 404](#404---not-found)
+- [Dark mode](#dark-mode)
+- [Mobile friendly](#mobile-friendly)
 
 ## Demo:
 

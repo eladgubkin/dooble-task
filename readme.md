@@ -25,7 +25,7 @@
 - [Dark mode](#dark-mode)
 - [Mobile friendly](#mobile-friendly)
 
-## Demo:
+## Demo
 
 ### Pagination
 

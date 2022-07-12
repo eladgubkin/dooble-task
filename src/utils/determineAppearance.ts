@@ -8,7 +8,7 @@ export const determineAppearance = (episode: number) => {
   if (episode <= 21) S = "S02";
   if (episode <= 11) S = "S01";
 
-  if (S === "S05") E = `E${episode - 40}`;
+  if (S === "S05") E = `E${episode - 41}`;
   if (S === "S04") E = `E${episode - 31}`;
   if (S === "S03") E = `E${episode - 21}`;
   if (S === "S02") E = `E${episode - 11}`;

@@ -1,7 +1,16 @@
+import { Box, CircularProgress } from "@mui/material";
+
 export const Loading = () => {
   return (
-    <div>
-      <h1>Loading....</h1>
-    </div>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      <CircularProgress />
+    </Box>
   );
 };

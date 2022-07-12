@@ -13,7 +13,7 @@ export const App = () => {
   const [status, setStatus] = useState("");
   const [gender, setGender] = useState("");
   const [character, setCharacter] = useState(null);
-  const [open, setOpen] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
 
   const { isLoading, data } = useRickAndMorty(pageNumber, search, status, gender);
 
@@ -38,11 +38,13 @@ export const App = () => {
         isLoading={isLoading}
         setPageNumber={setPageNumber}
         setCharacter={setCharacter}
-        handleOpen={() => setOpen(true)}
+        handleOpen={() => setOpenDialog(true)}
       />
 
       {/* ------- Dialog Modal ------- */}
-      {character && <Dialog open={open} handleClose={() => setOpen(false)} character={character} />}
+      {character && (
+        <Dialog open={openDialog} handleClose={() => setOpenDialog(false)} character={character} />
+      )}
     </div>
   );
 };

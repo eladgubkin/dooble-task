@@ -1,12 +1,19 @@
 # Rick & Morty Characters App
 
-[Task](https://gist.github.com/jacobra19/180a0d4b623fbc7c80a2209e89295ed3)
+[Task instructions](https://gist.github.com/jacobra19/180a0d4b623fbc7c80a2209e89295ed3)
+
+## Libraries used in this project:
+
+- [React](https://reactjs.org/)
+- [Material-UI](https://mui.com/)
+- [Rick & Morty API](https://rickandmortyapi.com/)
+- [React Query](https://react-query-v2.tanstack.com/)
 
 ## Demo:
 
 ### Pagination
 
-![Alt Text](./src//assets//pagination.gif)
+![Alt Text](./src//assets//pagination.gif) s
 
 ### Search and Filter
 

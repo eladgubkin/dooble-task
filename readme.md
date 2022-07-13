@@ -4,16 +4,17 @@
 
 ## Table of Contents
 
-- [Libraries used in this project](#libraries-used-in-this-project)
+- [Technologies & Libraries used in this project](#technologies-&-libraries-used-in-this-project)
 - [Features](#features)
 - [Demo](#demo)
 
-## Libraries used in this project
-
+## Technologies & Libraries used in this project
+- [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Material-UI](https://mui.com/)
-- [Rick & Morty API](https://rickandmortyapi.com/)
 - [React Query](https://react-query-v2.tanstack.com/)
+- [Rick & Morty API](https://rickandmortyapi.com/)
 
 ## Features
 
